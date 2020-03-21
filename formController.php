@@ -21,26 +21,32 @@ function controlsForm()
                             createMessage($data);
                         } else {
                             $_SESSION['error'] = 'message';
+                            $_SESSION['data'] = $data;
                             header('Location: index.php');
                         }
                     } else {
                         $_SESSION['error'] = 'subject';
+                        $_SESSION['data'] = $data;
                         header('Location: index.php');
                     }
                 } else {
                     $_SESSION['error'] = 'phone';
+                    $_SESSION['data'] = $data;
                     header('Location: index.php');
                 }
             } else {
                 $_SESSION['error'] = 'email';
+                $_SESSION['data'] = $data;
                 header('Location: index.php');
             }
         } else {
             $_SESSION['error'] = 'firstname';
+            $_SESSION['data'] = $data;
             header('Location: index.php');
         }
     } else {
         $_SESSION['error'] = 'name';
+        $_SESSION['data'] = $data;
         header('Location: index.php');
     }
 }
