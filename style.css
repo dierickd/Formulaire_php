@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+    --font_family: 'Roboto', sans-serif;
+    --color_main: #67406d;
+    --color_focus: #00000017;
+    --color_danger: #b82610;
+    --color_light: #e9e9e9;
+    --color_success: #166a2a;
+    --font_size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font_size);
+    background: var(--color_light);
+}
+
+.jumbotron {
+    height: 120px;
+    background: var(--color_main);
+    text-align: center;
+    line-height: 120px;
+    color: var(--color_light);
+    margin-bottom: 75px;
+}
+.jumbotron h1 {
+    margin: 0;
+}
+
+.form {
+    width: 600px;
+    margin: 25px auto;
+    border: 1px solid var(--color_main);
+    border-radius: 3px;
+    padding: 20px;
+}
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+input, textarea, select {
+    width: 100%;
+    font-style: italic;
+    padding: 10px 8px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color_main);
+    border-radius: 3px;
+    transition: all .3s ease;
+}
+input:focus, textarea:focus {
+    background: var(--color_focus);
+}
+.select {
+    padding: 10px 3px;
+    background: var(--color_focus);
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group .group-item:first-child {
+    margin-right: 25px;
+}
+.group-item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.required {
+    color: var(--color_danger);
+    font-style: italic;
+}
+.btn {
+    text-align: right;
+}
+.btn .btn-submit {
+    background: transparent;
+    border: 1px solid var(--color_main);
+    padding: .75em 1.35em;
+    border-radius: 3px;
+    color: var(--color_main);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.btn-submit:hover {
+    background: var(--color_main);
+    color: var(--color_light);
+}
+.form .error {
+    font-size: .75rem;
+    color: var(--color_danger);
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+
+}
+.success {
+    background: var(--color_success);
+}
+.container_fluid {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 20px;
+}
+.btn {
+    margin-top: 150px;
+    text-align: right;
+}
+.btn-home {
+    background: transparent;
+    border: 1px solid var(--color_success);
+    padding: .75em 1.35em;
+    border-radius: 3px;
+    color: var(--color_success);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.btn-home:hover {
+    background: var(--color_success);
+    color: var(--color_light);
+}
